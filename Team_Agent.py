@@ -4,6 +4,8 @@ from phi.model.groq import Groq
 from phi.tools.duckduckgo import DuckDuckGo
 from phi.tools.yfinance import YFinanceTools
 from dotenv import load_dotenv
+import streamlit as st
+
 
 load_dotenv()
 
@@ -36,4 +38,16 @@ agent_team = Agent(
     markdown=True,
 )
 
-agent_team.print_response("Summarize analyst recommendations and share the latest news for NVDA", stream=True)
+# agent_team.print_response("Summarize analyst recommendations and share the latest news for NVDA", stream=True)
+
+# Streamlit app
+st.title("Agent Team Query Processor")
+
+# User input
+user_query = st.text_input("Enter your query:", "Summarize analyst recommendations and share the latest news for NVDA")
+
+# Process the query
+if st.button("Submit"):
+    with st.spinner("Processing..."):
+        response = agent_team.print_response(user_query, stream=True)
+        st.write(response)
