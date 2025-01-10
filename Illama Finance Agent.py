@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
 def get_company_symbol(company: str) -> str:
     """Use this function to get the symbol for a company.
 
@@ -27,7 +26,6 @@ def get_company_symbol(company: str) -> str:
         "Google": "GOOGL",
     }
     return symbols.get(company, "Unknown")
-
 
 agent = Agent(
     model=Groq(id="llama-3.3-70b-versatile"),
