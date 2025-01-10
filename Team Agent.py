@@ -17,3 +17,13 @@ web_agent = Agent(
     markdown=True
 )
 
+finance_agent = Agent(
+    name="Finance Agent",
+    role="Get financial data",
+    model=Groq(id="llama-3.3-70b-versatile"),
+    # model=OpenAIChat(id="gpt-4o"),
+    tools=[YFinanceTools(stock_price=True, analyst_recommendations=True, company_info=True)],
+    instructions=["Use tables to display data"],
+    show_tool_calls=True,
+    markdown=True,
+)
