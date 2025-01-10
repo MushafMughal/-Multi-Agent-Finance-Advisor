@@ -41,13 +41,13 @@ agent_team = Agent(
 # agent_team.print_response("Summarize analyst recommendations and share the latest news for NVDA", stream=True)
 
 # Streamlit app
-st.title("Agent Team Query Processor")
+# st.title("Agent Team Query Processor")
 
-# User input
-user_query = st.text_input("Enter your query:", "Summarize analyst recommendations and share the latest news for NVDA")
+# # User input
+# user_query = st.text_input("Enter your query:", "Summarize analyst recommendations and share the latest news for NVDA")
 
-# Process the query
-if st.button("Submit"):
-    with st.spinner("Processing..."):
-        response = agent_team.print_response(user_query, stream=True)
-        st.write(response)
+# # Process the query
+# if st.button("Submit"):
+#     with st.spinner("Processing..."):
+#         response = agent_team.print_response(user_query, stream=True)
+#         st.write(response)
