@@ -1,3 +1,6 @@
 streamlit
 phidata
 dotenv
+yfinance
+openai
+duckduckgo-search
