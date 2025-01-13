@@ -18,7 +18,7 @@ The **MultiAgent Finance Advisor** is a Streamlit-based application that leverag
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/MultiAgent-Finance-Advisor.git
+   git clone https://github.com/MushafMughal/MultiAgent-Finance-Advisor.git
    cd agent-team-query-processor
    ```
 2. Install the required dependencies:
